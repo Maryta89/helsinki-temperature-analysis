@@ -42,13 +42,13 @@ Extreme days (computed from hourly data, own thresholds):
 
 ### Annual mean temperature with linear trend, 2006-2025
 
-![Annual mean temperature with linear trend](Figures/annual_mean_trend.png)
+![Annual mean temperature with linear trend](annual_mean_trend.png)
 
 The dashed line is the least squares trend (+0.065 °C/year). Single years such as 2010 (coldest) and 2020 (warmest) deviate strongly from it.
 
 ### Seasonal mean temperature by year
 
-![Seasonal mean temperature](Figures/seasonal_mean.png)
+![Seasonal mean temperature](seasonal_mean.png)
 
 Winter varies the most between years, which is why its steepest trend (1.0 °C/decade) is still not statistically significant.
 
@@ -86,11 +86,11 @@ The duplicate timestamps are two genuine measurements with different values, so 
 ## Repository structure
 
 ```
-Data/
-  RAW/            place the original FMI csv file here (not included, see data section)
-  Processed/      annual, monthly and seasonal mean temperature csv files
-  Notebooks/      01_Data_Inspection.ipynb
-Figures/          charts used in this README (created by the last notebook cell)
+Notebooks/              01_Data_Inspection.ipynb
+Processed/              annual, monthly and seasonal mean temperature csv files
+RAW/                    place the original FMI csv file here (not included, see data section)
+annual_mean_trend.png   chart used in this README
+seasonal_mean.png       chart used in this README
 README.md
 ```
 
@@ -153,8 +153,8 @@ The analysis is one notebook, `01_Data_Inspection.ipynb`, organized in eight sta
 pip install pandas numpy scipy matplotlib jupyterlab
 ```
 
-3. Place the FMI csv file in `Data/RAW/` (only one csv file in this folder).
-4. Open `Data/Notebooks/01_Data_Inspection.ipynb` in JupyterLab.
+3. Place the FMI csv file in `RAW/` (only one csv file in this folder).
+4. Open `Notebooks/01_Data_Inspection.ipynb` in JupyterLab.
 5. Run `Kernel > Restart Kernel and Run All Cells`.
 
 Tested with Python 3.12, pandas 2.3, NumPy 2.3.
@@ -172,4 +172,5 @@ The data was downloaded from the FMI observation download service. The analysis 
 ## Author
 
 **Maryam Talebzadeh**
+
 Data analytics portfolio: [Maryta89 on GitHub](https://github.com/Maryta89)
